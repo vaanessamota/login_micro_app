@@ -4,7 +4,7 @@ import 'package:login_micro_app/login/domain/entities/default_login_entity.dart'
 import 'package:login_micro_app/login/domain/usecases/default_login_usecase.dart';
 import 'package:mockito/mockito.dart';
 
-import '../../../../resources/mocks.mocks.dart';
+import '../../../resources/mocks.mocks.dart';
 
 void main() {
   late AuthRepositoryImpl sut;
