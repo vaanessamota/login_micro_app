@@ -1,4 +1,4 @@
-import 'package:login_micro_app/login/ui/pages/login_page.dart';
+import 'package:login_micro_app/login/ui/login_page.dart';
 import 'package:micro_core/micro_core.dart';
 
 class LoginMicroAppResolver implements MicroApp {
