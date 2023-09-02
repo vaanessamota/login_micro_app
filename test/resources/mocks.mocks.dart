@@ -5,12 +5,18 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'dart:async' as _i5;
 
-import 'package:login_micro_app/login/data/models/default_login_request_model.dart' as _i8;
-import 'package:login_micro_app/login/data/models/default_login_response_model.dart' as _i3;
-import 'package:login_micro_app/login/data/services/auth_service.dart' as _i7;
-import 'package:login_micro_app/login/domain/entities/default_login_entity.dart' as _i2;
-import 'package:login_micro_app/login/domain/repositories/auth_repository.dart' as _i4;
-import 'package:login_micro_app/login/domain/usecases/default_login_usecase.dart' as _i6;
+import 'package:login_micro_app/login/data/datasources/auth_datasource.dart'
+    as _i7;
+import 'package:login_micro_app/login/data/models/default_login_request_model.dart'
+    as _i8;
+import 'package:login_micro_app/login/data/models/default_login_response_model.dart'
+    as _i3;
+import 'package:login_micro_app/login/domain/entities/default_login_entity.dart'
+    as _i2;
+import 'package:login_micro_app/login/domain/repositories/auth_repository.dart'
+    as _i4;
+import 'package:login_micro_app/login/domain/usecases/default_login_usecase.dart'
+    as _i6;
 import 'package:mockito/mockito.dart' as _i1;
 
 // ignore_for_file: type=lint
@@ -24,7 +30,8 @@ import 'package:mockito/mockito.dart' as _i1;
 // ignore_for_file: camel_case_types
 // ignore_for_file: subtype_of_sealed_class
 
-class _FakeDefaultLoginEntity_0 extends _i1.SmartFake implements _i2.DefaultLoginEntity {
+class _FakeDefaultLoginEntity_0 extends _i1.SmartFake
+    implements _i2.DefaultLoginEntity {
   _FakeDefaultLoginEntity_0(
     Object parent,
     Invocation parentInvocation,
@@ -34,7 +41,8 @@ class _FakeDefaultLoginEntity_0 extends _i1.SmartFake implements _i2.DefaultLogi
         );
 }
 
-class _FakeDefaultLoginResponseModel_1 extends _i1.SmartFake implements _i3.DefaultLoginResponseModel {
+class _FakeDefaultLoginResponseModel_1 extends _i1.SmartFake
+    implements _i3.DefaultLoginResponseModel {
   _FakeDefaultLoginResponseModel_1(
     Object parent,
     Invocation parentInvocation,
@@ -53,13 +61,15 @@ class MockAuthRepository extends _i1.Mock implements _i4.AuthRepository {
   }
 
   @override
-  _i5.Future<_i2.DefaultLoginEntity> defaultLogin(_i6.DefaultLoginUsecaseParams? params) =>
+  _i5.Future<_i2.DefaultLoginEntity> defaultLogin(
+          _i6.DefaultLoginUsecaseParams? params) =>
       (super.noSuchMethod(
         Invocation.method(
           #defaultLogin,
           [params],
         ),
-        returnValue: _i5.Future<_i2.DefaultLoginEntity>.value(_FakeDefaultLoginEntity_0(
+        returnValue:
+            _i5.Future<_i2.DefaultLoginEntity>.value(_FakeDefaultLoginEntity_0(
           this,
           Invocation.method(
             #defaultLogin,
@@ -69,22 +79,24 @@ class MockAuthRepository extends _i1.Mock implements _i4.AuthRepository {
       ) as _i5.Future<_i2.DefaultLoginEntity>);
 }
 
-/// A class which mocks [AuthService].
+/// A class which mocks [AuthDataSource].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockAuthService extends _i1.Mock implements _i7.AuthService {
-  MockAuthService() {
+class MockAuthDataSource extends _i1.Mock implements _i7.AuthDataSource {
+  MockAuthDataSource() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i5.Future<_i3.DefaultLoginResponseModel> defaultLogin(_i8.DefaultLoginRequestModel? requestModel) =>
+  _i5.Future<_i3.DefaultLoginResponseModel> defaultLogin(
+          _i8.DefaultLoginRequestModel? requestModel) =>
       (super.noSuchMethod(
         Invocation.method(
           #defaultLogin,
           [requestModel],
         ),
-        returnValue: _i5.Future<_i3.DefaultLoginResponseModel>.value(_FakeDefaultLoginResponseModel_1(
+        returnValue: _i5.Future<_i3.DefaultLoginResponseModel>.value(
+            _FakeDefaultLoginResponseModel_1(
           this,
           Invocation.method(
             #defaultLogin,

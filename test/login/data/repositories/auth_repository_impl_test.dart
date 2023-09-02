@@ -8,10 +8,10 @@ import '../../../resources/mocks.mocks.dart';
 
 void main() {
   late AuthRepositoryImpl sut;
-  late MockAuthService mockAuthService;
+  late MockAuthDataSource mockAuthService;
 
   setUp(() {
-    mockAuthService = MockAuthService();
+    mockAuthService = MockAuthDataSource();
     sut = AuthRepositoryImpl(mockAuthService);
   });
 
