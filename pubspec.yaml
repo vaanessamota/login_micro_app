@@ -14,6 +14,7 @@ dependencies:
   mockito: ^5.4.0
   micro_core:
       path: ../micro_core/
+  equatable: ^2.0.5
 
 dev_dependencies:
   flutter_test:
