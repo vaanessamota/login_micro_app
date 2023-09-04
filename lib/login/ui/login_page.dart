@@ -1,6 +1,9 @@
-library login_micro_app;
-
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:login_micro_app/login/login_events.dart/login_events.dart';
+import 'package:login_micro_app/login/login_events.dart/login_presenter.dart';
+import 'package:login_micro_app/login/ui/widgets/login_form_widget.dart';
+import 'package:micro_core/utils/micro_core_dependencies.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -10,20 +13,40 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  final LoginBloc loginBloc = locator.get();
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Micro App Login Page'),
+        title: const Text('Login'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const <Widget>[
-            Text(
-              'Welcome to the Micro App Login Page',
-            ),
-          ],
+      body: BlocProvider(
+        create: (context) => loginBloc, // Initialize your LoginBloc
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 30),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text(
+                'Welcome to the login microapp',
+                style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
+              ),
+              const SizedBox(height: 60),
+              LoginForm(
+                emailController: emailController,
+                passwordController: passwordController,
+              ),
+              ElevatedButton(
+                  onPressed: () {
+                    loginBloc.add(
+                        PerformLoginEvent(email: emailController.text, password: passwordController.text));
+                  },
+                  child: const Text('Login'))
+            ],
+          ),
         ),
       ),
     );
