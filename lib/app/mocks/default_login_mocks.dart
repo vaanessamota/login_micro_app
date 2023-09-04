@@ -1,3 +1,4 @@
-import 'package:login_micro_app/login/data/models/default_login_response_model.dart';
-
-DefaultLoginResponseModel loadDefaultLoginMockedData() => DefaultLoginResponseModel(token: 'token');
+Map<String, dynamic> loadDefaultLoginMockedData() => {
+      'token':
+          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c'
+    };
