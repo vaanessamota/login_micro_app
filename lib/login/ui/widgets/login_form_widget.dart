@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:login_micro_app/login/domain/errors/domain_errors.dart';
-import 'package:login_micro_app/login/login_events.dart/login_presenter.dart';
-import 'package:login_micro_app/login/login_events.dart/login_state.dart';
+import 'package:login_micro_app/login/presentation/login_presenter.dart';
+import 'package:login_micro_app/login/presentation/login_state.dart';
 
 class LoginForm extends StatelessWidget {
   final TextEditingController emailController;

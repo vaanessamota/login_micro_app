@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:login_micro_app/login/login_events.dart/login_events.dart';
-import 'package:login_micro_app/login/login_events.dart/login_presenter.dart';
+import 'package:login_micro_app/login/presentation/login_events.dart';
+import 'package:login_micro_app/login/presentation/login_presenter.dart';
 import 'package:login_micro_app/login/ui/widgets/login_form_widget.dart';
 import 'package:micro_core/utils/micro_core_dependencies.dart';
 
