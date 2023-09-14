@@ -1,7 +1,7 @@
 import 'package:login_micro_app/login/domain/entities/default_login_entity.dart';
 
 class DefaultLoginResponseModel {
-  final String token;
+  final String? token;
 
   DefaultLoginResponseModel({required this.token});
 

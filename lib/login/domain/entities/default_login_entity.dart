@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 
 class DefaultLoginEntity with EquatableMixin {
-  final String token;
+  final String? token;
 
   DefaultLoginEntity({required this.token});
 
